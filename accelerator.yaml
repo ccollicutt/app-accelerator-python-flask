@@ -1,0 +1,13 @@
+accelerator:
+  displayName: python-flask-hello-world
+  description: An application accelerator for a simple python flask hello world
+  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-tanzu-light.png
+  tags: []
+  options:
+  - name: optionName
+    label: Nice Label
+    display: true
+    defaultValue: ""
+engine:
+  include:
+  - '**'
