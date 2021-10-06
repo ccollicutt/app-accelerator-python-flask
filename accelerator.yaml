@@ -2,12 +2,20 @@ accelerator:
   displayName: python-flask-hello-world
   description: An application accelerator for a simple python flask hello world
   iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-tanzu-light.png
-  tags: []
+  tags:
+    - python
   options:
   - name: helloWorldText
     label: Hello World Text
+    description: "Set the hello world text you want to see"
     display: true
     defaultValue: "Hello, World!"
+  - name: enableLocalDevReadme
+    label: Include Local Development Readme in zip file
+    description: Toggle "On" to include a local development readme
+    inputType: toggle
+    dataType: boolean
+    defaultValue: true
 
 engine:
   merge:
@@ -17,3 +25,7 @@ engine:
         substitutions:
           - text: "hello-world-var"
             with: "#helloWorldText"
+    - include: [ "LOCAL-DEV.md" ]
+      condition: "#enableLocalDevReadme"
+
+    
