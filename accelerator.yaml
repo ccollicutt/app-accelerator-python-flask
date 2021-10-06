@@ -8,9 +8,12 @@ accelerator:
     label: Hello World Text
     display: true
     defaultValue: "Hello, World!"
-include: ['*.py' ]
-chain:
-  - type: ReplaceText
-    substitutions:
-      - text: "hello-world-var"
-        with: "#helloWorldText"
+
+engine:
+  merge:
+    - include: [ "hello.py" ]
+      chain:
+      - type: ReplaceText
+        substitutions:
+          - text: "hello-world-var"
+            with: "#helloWorldText"
