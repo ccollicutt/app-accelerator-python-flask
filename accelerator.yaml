@@ -4,10 +4,13 @@ accelerator:
   iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-tanzu-light.png
   tags: []
   options:
-  - name: optionName
-    label: Nice Label
+  - name: helloWorldText
+    label: Hello World Text
     display: true
-    defaultValue: ""
-engine:
-  include:
-  - '**'
+    defaultValue: "Hello, World!"
+include: ['*.py' ]
+chain:
+  - type: ReplaceText
+    substitutions:
+      - text: "hello-world-var"
+        with: "#helloWorldText"
