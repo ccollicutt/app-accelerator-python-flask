@@ -7,15 +7,18 @@ accelerator:
   options:
   - name: helloWorldText
     label: Hello World Text
-    description: "Set the hello world text you want to see"
+    description: "Set the hello world text you want the application to return"
     display: true
     defaultValue: "Hello, World!"
+    required: true
   - name: enableLocalDevReadme
-    label: Include Local Development Readme in zip file
+    label: "Include Local Dev Readme?"
+    display: true
     description: Toggle "On" to include a local development readme
     inputType: toggle
     dataType: boolean
     defaultValue: true
+    required: true
 
 engine:
   merge:
