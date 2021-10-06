@@ -22,7 +22,7 @@ accelerator:
 
 engine:
   merge:
-    - include: [ "hello.py" ]
+    - include: [ "app.py" ]
       chain:
       - type: ReplaceText
         substitutions:
